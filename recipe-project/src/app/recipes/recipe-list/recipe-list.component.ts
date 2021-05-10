@@ -8,18 +8,21 @@ import { Recipe } from '../recipe.model';
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  @Output() recipeWasSelected = new EventEmitter<Recipe>();
-  recipes: Recipe[] = [
-    new Recipe('Test recipe', 'Probably a test', 'https://cpb-us-e1.wpmucdn.com/blogs.uoregon.edu/dist/c/829/files/2012/10/PSD_Food_illustrations_3190_pancakes_with_butter-1wi1tz5.jpg'),
 
-    new Recipe('Test recipe', 'Probably a test', 'https://cpb-us-e1.wpmucdn.com/blogs.uoregon.edu/dist/c/829/files/2012/10/PSD_Food_illustrations_3190_pancakes_with_butter-1wi1tz5.jpg')
+  recipes: Recipe[] = [
+    new Recipe('Meat Cakes', 'Traditional cakes', 'https://cpb-us-e1.wpmucdn.com/blogs.uoregon.edu/dist/c/829/files/2012/10/PSD_Food_illustrations_3190_pancakes_with_butter-1wi1tz5.jpg'),
+
+    new Recipe('Fish Cakes', 'Fun cakes', 'https://cpb-us-e1.wpmucdn.com/blogs.uoregon.edu/dist/c/829/files/2012/10/PSD_Food_illustrations_3190_pancakes_with_butter-1wi1tz5.jpg')
 
   ];
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
-  onRecipeSelected(recipe: Recipe) {
-this.recipeWasSelected.emit(recipe);
-  }
+
 }
+  // @Output() recipeWasSelected = new EventEmitter<Recipe>();
+
+// onRecipeSelected(recipe: Recipe) {
+// // this.recipeWasSelected.emit(recipe);
+// //   }
